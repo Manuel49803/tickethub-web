@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro - TicketHub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body class="bg-surface-container-low text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col justify-center items-center">
+<main class="w-full">
+<div class="flex flex-col w-full items-center justify-center py-12 px-4 sm:px-6 min-h-screen">
+<div class="w-full max-w-[460px] mx-auto flex flex-col items-center">
+<div class="flex items-center gap-2.5 mb-8">
+<div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">confirmation_number</span></div>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Ticket<span class="text-primary-container">Hub</span></span>
+</div>
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md p-8 sm:p-9">
+<div class="text-center mb-7">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold mb-2">Crear cuenta</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Regístrate para levantar y dar seguimiento a tus tickets.</p>
+</div>
+<form class="flex flex-col space-y-4" id="registerForm" onsubmit="event.preventDefault(); register(this);">
+<label class="flex flex-col space-y-1.5"><span class="font-label-md text-label-md text-on-surface font-medium">Nombre completo</span><input autocomplete="name" class="w-full h-10 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline transition-all focus:ring-2 focus:ring-primary/20" minlength="3" required/></label>
+<label class="flex flex-col space-y-1.5"><span class="font-label-md text-label-md text-on-surface font-medium">Correo electrónico corporativo</span><input autocomplete="email" class="w-full h-10 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline transition-all focus:ring-2 focus:ring-primary/20" placeholder="nombre@empresa.com" required type="email"/></label>
+<label class="flex flex-col space-y-1.5"><span class="font-label-md text-label-md text-on-surface font-medium">Contraseña</span><input autocomplete="new-password" class="w-full h-10 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline transition-all focus:ring-2 focus:ring-primary/20" id="pw" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Mínimo 8 caracteres, una mayúscula y un número" required type="password"/><span class="font-label-sm text-label-sm text-on-surface-variant">Mínimo 8 caracteres, con una mayúscula y un número.</span></label>
+<label class="flex flex-col space-y-1.5"><span class="font-label-md text-label-md text-on-surface font-medium">Confirmar contraseña</span><input autocomplete="new-password" class="w-full h-10 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline transition-all focus:ring-2 focus:ring-primary/20" id="pw2" required type="password"/></label>
+<p class="hidden font-label-md text-label-md text-error" id="pwError">Las contraseñas no coinciden.</p>
+<div class="rounded-lg bg-surface-container-low p-3 flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">info</span><span>Tu cuenta se crea como <strong class="text-on-surface">Solicitante (USER)</strong>. Un administrador puede cambiar tu rol después.</span></div>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 hover:bg-primary transition-all active:scale-[0.98] shadow-sm" type="submit">Crear cuenta</button>
+</form>
+</div>
+<p class="mt-6 font-body-md text-body-md text-on-surface-variant">¿Ya tienes cuenta? <a class="text-primary font-semibold hover:underline" href="login.html">Inicia sesión</a></p>
+<script>
+function register(form) {
+  const ok = document.getElementById('pw').value === document.getElementById('pw2').value;
+  document.getElementById('pwError').classList.toggle('hidden', ok);
+  if (!ok) return;
+  try { localStorage.setItem('th-role', 'USER'); } catch (e) {}
+  TH.toast('Cuenta creada. Ya puedes iniciar sesión.');
+  setTimeout(() => location.href = 'login.html', 1500);
+}
+</script>
+</div>
+</div>
+</main>
+</body>
+</html>

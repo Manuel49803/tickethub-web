@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión - TicketHub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<script src="js/app.js"></script>
+</head>
+<body class="bg-surface-container-low text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col justify-center items-center">
+<main class="w-full">
+<div class="flex flex-col w-full items-center justify-center py-12 px-4 sm:px-6 relative overflow-hidden">
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-40 -right-40 w-96 h-96 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full max-w-md relative z-10 flex flex-col items-center">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[24px]">confirmation_number</span>
+</div>
+<span class="font-headline-lg text-headline-lg tracking-tight text-on-surface">TicketHub</span>
+</div>
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-xl shadow-surface-dim/40 p-8 sm:p-10 flex flex-col">
+<div class="mb-6 text-center">
+<h1 class="font-headline-sm text-headline-sm text-on-surface mb-1.5">Iniciar sesión en TicketHub</h1>
+<p class="font-body-sm text-body-sm text-secondary">Ingresa tus credenciales para acceder a la mesa de ayuda</p>
+</div>
+<form class="flex flex-col gap-4" onsubmit="event.preventDefault(); location.href = TH.homeFor();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="corporate-email">
+<span>Correo electrónico corporativo</span>
+<span class="font-label-sm text-label-sm text-secondary">Obligatorio</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">mail</span>
+<input autocomplete="email" class="w-full h-10 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm" id="corporate-email" placeholder="tu.nombre@empresa.com" required type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="password">Contraseña</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">lock</span>
+<input autocomplete="current-password" class="w-full h-10 pl-10 pr-10 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low transition-colors shadow-sm" id="password" placeholder="••••••••••••" required type="password"/>
+<button aria-label="Alternar visibilidad de contraseña" class="absolute right-2.5 text-secondary hover:text-on-surface transition-colors p-1 flex items-center justify-center rounded" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[20px]" id="password-icon">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="remember" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary">Recordar este equipo</span>
+</label>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors" href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+</div>
+<button class="w-full h-10 mt-2 bg-primary-container hover:bg-primary active:scale-[0.98] text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 shadow-md shadow-primary-container/20 transition-all cursor-pointer" type="submit">
+<span>Iniciar sesión</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<div class="mt-8 pt-5 bg-surface-container-low -mx-8 sm:-mx-10 -mb-8 sm:-mb-10 p-5 rounded-b-xl flex items-center justify-center gap-2 text-center">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-secondary">Acceso protegido con cifrado TLS 256-bit y políticas corporativas</span>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">¿No tienes cuenta? <a class="text-primary font-semibold hover:underline" href="registro.html">Regístrate</a></p>
+</div>
+</div>
+</div>
+</main>
+<script>
+(function () {
+  const toggleBtn = document.getElementById('toggle-password');
+  const pwdInput = document.getElementById('password');
+  const pwdIcon = document.getElementById('password-icon');
+  toggleBtn.addEventListener('click', function () {
+    const isPassword = pwdInput.getAttribute('type') === 'password';
+    pwdInput.setAttribute('type', isPassword ? 'text' : 'password');
+    pwdIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+  });
+})();
+</script>
+</body>
+</html>
