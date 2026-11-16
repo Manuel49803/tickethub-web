@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil de usuario - TicketHub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased" data-access="USER LIBERADOR AGENT ADMIN">
+<aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest z-40 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col flex-1 min-h-0">
+<a class="h-16 flex items-center px-space-xl gap-space-sm" href="index.html"><span class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">confirmation_number</span></span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TicketHub</span></a>
+<div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-xl">
+<div class="space-y-space-xs" data-roles="LIBERADOR AGENT ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Principal</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="LIBERADOR AGENT ADMIN" href="dashboard.html"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></a></nav></div>
+<div class="space-y-space-xs" data-roles="USER LIBERADOR AGENT ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Solicitante</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="USER ADMIN" href="mis-tickets.html"><span class="material-symbols-outlined text-[20px]">confirmation_number</span><span class="font-body-md text-body-md">Mis tickets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="USER LIBERADOR AGENT ADMIN" href="nuevo-ticket.html"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-body-md text-body-md">Nuevo ticket</span></a></nav></div>
+<div class="space-y-space-xs" data-roles="LIBERADOR ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Revisión</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="LIBERADOR ADMIN" href="revision.html"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Bandeja de revisión</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="LIBERADOR ADMIN" href="por-asignar.html"><span class="material-symbols-outlined text-[20px]">assignment_ind</span><span class="font-body-md text-body-md">Por asignar</span></a></nav></div>
+<div class="space-y-space-xs" data-roles="AGENT ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Agente</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="AGENT ADMIN" href="pendientes.html"><span class="material-symbols-outlined text-[20px]">inbox</span><span class="font-body-md text-body-md">Mis pendientes</span></a></nav></div>
+<div class="space-y-space-xs" data-roles="ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Administración</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="ADMIN" href="todos-los-tickets.html"><span class="material-symbols-outlined text-[20px]">list_alt</span><span class="font-body-md text-body-md">Todos los tickets</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="ADMIN" href="usuarios.html"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-body-md text-body-md">Usuarios</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="ADMIN" href="categorias.html"><span class="material-symbols-outlined text-[20px]">category</span><span class="font-body-md text-body-md">Categorías</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="ADMIN" href="reportes.html"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Reportes</span></a></nav></div>
+<div class="space-y-space-xs" data-roles="USER LIBERADOR AGENT ADMIN"><p class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cuenta</p><nav class="space-y-space-xs"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-roles="USER LIBERADOR AGENT ADMIN" href="notificaciones.html"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-body-md text-body-md">Notificaciones</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-surface-container-high text-primary font-title-md" data-roles="USER LIBERADOR AGENT ADMIN" href="perfil.html"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-body-md text-body-md">Mi perfil</span></a></nav></div>
+</div></div>
+<div class="p-space-md bg-surface-container-lowest"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" href="login.html"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md">Cerrar sesión</span></a></div>
+</aside>
+<div class="pl-64">
+<header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-lg">
+<div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant pl-10 pr-space-lg py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Buscar por folio o título..." type="search"/></div></div>
+<div class="flex items-center gap-space-lg">
+<!-- SOLO MAQUETA: quitar cuando el rol venga de la sesión -->
+<label class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant" data-demo="role-preview"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="hidden xl:inline">Vista previa de rol</span><select class="bg-surface-container-low text-on-surface rounded-lg px-2 py-1 font-label-md text-label-md focus:outline-none cursor-pointer" id="role-preview"><option value="USER">USER</option><option value="LIBERADOR">LIBERADOR</option><option value="AGENT">AGENT</option><option value="ADMIN">ADMIN</option></select></label>
+<a class="inline-flex items-center gap-space-xs bg-primary-container text-on-primary px-space-lg py-space-sm rounded-lg font-label-md text-label-md hover:bg-primary transition-colors" href="nuevo-ticket.html"><span class="material-symbols-outlined text-[18px]">add</span><span>Nuevo ticket</span></a>
+<a aria-label="Notificaciones" class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors flex items-center justify-center" href="notificaciones.html"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-error text-on-error rounded-full flex items-center justify-center text-[10px] leading-none font-semibold">3</span></a>
+<a class="flex items-center gap-space-md pl-space-sm hover:opacity-90 transition-opacity" href="perfil.html"><span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md">EG</span><span class="flex flex-col text-left"><span class="font-title-md text-title-md text-on-surface leading-tight">Elena Gómez</span><span class="inline-flex items-center w-fit px-space-xs bg-surface-container-high text-primary rounded-full font-label-sm text-label-sm" data-role-label="">Administrador</span></span></a>
+</div></div></header>
+<main class="relative pt-16 bg-surface-container-lowest min-h-screen">
+<div class="w-full max-w-7xl mx-auto px-gutter-desktop py-space-xl space-y-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider bg-surface-container-high px-space-sm py-0.5 rounded-full">Gestión de Agente</span><span class="font-label-sm text-label-sm text-on-surface-variant">ID: AGT-9942</span></div>
+<h1 class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">Mi Perfil y Preferencias</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Controla tu visibilidad de cola, parámetros operativos y configuración de cuenta institucional.</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-space-md py-space-sm rounded-lg"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">Cola Activa: Nivel 3 Escalaciones</span></div>
+</div>
+
+<div class="bg-surface-container-low p-1 rounded-xl inline-flex flex-wrap gap-1">
+<button class="tab-btn inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg font-title-md text-title-md bg-surface-container-lowest text-primary shadow-sm transition-all" type="button"><span class="material-symbols-outlined text-[18px]">badge</span><span>Información Personal</span></button>
+<button onclick="document.getElementById('seguridad').scrollIntoView({behavior:'smooth', block:'center'})" class="tab-btn inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px]">lock_reset</span><span>Seguridad y Accesos</span></button>
+<button onclick="location.href='notificaciones.html'" class="tab-btn inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px]">notifications_active</span><span>Notificaciones de Tickets</span></button>
+<button data-roles="AGENT" class="tab-btn inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg font-title-md text-title-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[18px]">calendar_clock</span><span>Disponibilidad de Turno</span></button>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<aside class="lg:col-span-4 space-y-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-r from-primary-container/10 via-primary/5 to-surface-variant"></div>
+<div class="relative mt-4 mb-space-md group">
+<img alt="Elena Gómez" class="w-28 h-28 rounded-full object-cover shadow-md ring-4 ring-surface-container-lowest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjhLqiCxN2ZL6Jg9P08eGotrvTwzpZYnMjk1Ai1mxjqJh91M6NT-wmKjuVRu9saeL0sotl6zk6w-fvwRHiovsMiaibFmZTc3d-iaWZRuge4ggZerlBWy8aDJhMU7FUO4r3nHyE1cMd8keurDPCHFD8X1OSWKlTDzuXsA8muBm_CD28Wp-IuWT0lGHM2twKDW_B2CVFLDgUUJAFLz0QLanOPgSA-7G4W1VLJAvP5DQ"/>
+<button class="absolute bottom-0 right-0 bg-primary hover:bg-primary-container text-on-primary p-2 rounded-full shadow-md transition-transform hover:scale-105" title="Cambiar foto de perfil" type="button"><span class="material-symbols-outlined text-[18px] block">photo_camera</span></button>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Elena Gómez</h2>
+<div class="inline-flex items-center gap-1.5 px-space-md py-0.5 mt-1 rounded-full bg-surface-container-high text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[14px]">verified_user</span><span data-role-label="">Administrador</span></div>
+
+<div data-roles="AGENT" class="w-full mt-space-xl pt-space-md bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm text-left">
+<span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-600"></span></span>
+<div><p class="font-title-md text-title-md text-on-surface leading-none" id="shiftLabel">En turno</p><p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Recibiendo tickets automáticos</p></div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer"><input checked class="sr-only peer" id="agent-shift-toggle" type="checkbox"/><div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div></label>
+</div>
+<div data-roles="AGENT" class="w-full grid grid-cols-2 gap-space-xs mt-space-md">
+<button class="py-space-sm px-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">coffee</span><span>Pausa Activa (15m)</span></button>
+<button class="py-space-sm px-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">call_split</span><span>Desviar Casos</span></button>
+</div></div>
+
+<div data-roles="AGENT" class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl space-y-space-lg">
+<div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">analytics</span><h3 class="font-title-md text-title-md text-on-surface">Rendimiento Operativo (Mes Actual)</h3></div><span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Q3 2024</span></div>
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">speed</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Tiempo Promedio Resolución</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">1h 42m</span></div></div>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full font-medium">-18m vs objetivo</span></div>
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-md"><div class="relative w-10 h-10 flex items-center justify-center"><svg class="w-10 h-10 transform -rotate-90" viewBox="0 0 36 36"><path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"/><path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="98.4, 100" stroke-linecap="round" stroke-width="3.5"/></svg><span class="material-symbols-outlined absolute text-[16px] text-primary">task_alt</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">SLA Cumplido</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">98.4%</span></div></div>
+<span class="font-label-sm text-label-sm text-emerald-700 bg-emerald-50 px-2 py-1 rounded-full font-medium">Meta: 95.0%</span></div>
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">mark_email_read</span></div><div><span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Tickets Atendidos Totales</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">1,420</span></div></div>
+<span class="font-label-sm text-label-sm text-primary bg-surface-container px-2 py-1 rounded-full font-semibold">Top 3 Agente</span></div>
+<div class="p-space-md bg-surface-container-low rounded-xl space-y-2">
+<div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Carga de resolución (Últimos 7 días)</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">84 resueltos</span></div>
+<div class="h-10 w-full flex items-end gap-1.5 pt-2">
+<div class="flex-1 bg-surface-variant hover:bg-primary-container transition-colors rounded-t h-[45%]" title="Lun: 10"></div>
+<div class="flex-1 bg-surface-variant hover:bg-primary-container transition-colors rounded-t h-[65%]" title="Mar: 14"></div>
+<div class="flex-1 bg-surface-variant hover:bg-primary-container transition-colors rounded-t h-[90%]" title="Mié: 19"></div>
+<div class="flex-1 bg-surface-variant hover:bg-primary-container transition-colors rounded-t h-[75%]" title="Jue: 16"></div>
+<div class="flex-1 bg-primary rounded-t h-[100%]" title="Vie: 21 (Pico de cierre)"></div>
+<div class="flex-1 bg-surface-variant hover:bg-primary-container transition-colors rounded-t h-[20%]" title="Sáb: 4"></div>
+<div class="flex-1 bg-surface-container rounded-t h-[3px]" title="Dom: Libre"></div>
+</div></div>
+</div>
+
+<div data-roles="AGENT" class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl">
+<h4 class="font-title-md text-title-md text-on-surface mb-space-sm">Especialidades &amp; Certificaciones L3</h4>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-1 rounded-md">Kubernetes Clusters</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-1 rounded-md">PostgreSQL Incidentals</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-1 rounded-md">API Gateway &amp; Auth</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-1 rounded-md">SLA Sev-1 Lead</span>
+</div></div>
+</aside>
+
+<section class="lg:col-span-8 space-y-space-xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl space-y-space-lg">
+<div class="flex items-center justify-between pb-space-sm"><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Datos Personales y Locales</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Tu nombre y datos de contacto.</p></div><span class="material-symbols-outlined text-outline-variant text-[24px]">manage_accounts</span></div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-lg" id="profile-form">
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="input-fullname">Nombre Completo</label><input class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="input-fullname" type="text" value="Elena Gómez"/></div>
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="input-email"><span>Correo Electrónico Institucional</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Solo lectura</span></label><input class="w-full h-10 px-space-md bg-surface-container text-on-surface-variant rounded-lg font-body-md text-body-md cursor-not-allowed select-all" id="input-email" readonly type="email" value="elena.gomez@tickethub.corp"/></div>
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="input-phone">Teléfono de Contacto Operativo</label><input class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="input-phone" type="tel" value="+57 312 984 5510"/></div>
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="select-timezone">Zona Horaria Base</label><div class="relative"><select class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer" id="select-timezone"><option selected value="bogota">GMT-5 (Bogotá, Lima, Quito)</option><option value="mexico">GMT-6 (Ciudad de México)</option><option value="santiago">GMT-4 (Santiago de Chile)</option><option value="buenosaires">GMT-3 (Buenos Aires, São Paulo)</option><option value="madrid">GMT+1 (Madrid, Barcelona)</option></select><span class="material-symbols-outlined pointer-events-none absolute right-3 top-2.5 text-on-surface-variant text-[20px]">expand_more</span></div></div>
+<div class="space-y-1.5 md:col-span-2"><label class="font-label-md text-label-md text-on-surface font-semibold" for="select-language">Idioma de la Interfaz</label><div class="relative md:w-1/2"><select class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer" id="select-language"><option selected value="es">Español (Latinoamérica) - Predeterminado</option><option value="en">English (US)</option><option value="pt">Português (Brasil)</option></select><span class="material-symbols-outlined pointer-events-none absolute right-3 top-2.5 text-on-surface-variant text-[20px]">expand_more</span></div></div>
+</form></div>
+
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl space-y-space-lg" id="seguridad">
+<div class="flex items-center justify-between pb-space-sm"><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Cambiar contraseña</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Mínimo 8 caracteres, con al menos una mayúscula y un número.</p></div><span class="material-symbols-outlined text-outline-variant text-[24px]">lock_reset</span></div>
+<form class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-end" id="password-form" onsubmit="event.preventDefault(); changePassword(this);">
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="pw-current">Contraseña actual</label><input autocomplete="current-password" class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" id="pw-current" required type="password"/></div>
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="pw-new">Nueva contraseña</label><input autocomplete="new-password" class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" id="pw-new" minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" required title="Mínimo 8 caracteres, una mayúscula y un número" type="password"/></div>
+<div class="space-y-1.5"><label class="font-label-md text-label-md text-on-surface font-semibold" for="pw-confirm">Confirmar nueva contraseña</label><input autocomplete="new-password" class="w-full h-10 px-space-md bg-surface-container-low rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20" id="pw-confirm" required type="password"/></div>
+<p class="hidden md:col-span-3 font-label-md text-label-md text-error" id="pw-error">Las contraseñas nuevas no coinciden.</p>
+<div class="md:col-span-3 flex justify-end"><button class="inline-flex items-center gap-space-xs px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-title-md text-title-md rounded-lg transition-colors" type="submit"><span class="material-symbols-outlined text-[18px]">key</span>Actualizar contraseña</button></div>
+</form>
+<script>
+function changePassword(form) {
+  const ok = document.getElementById('pw-new').value === document.getElementById('pw-confirm').value;
+  document.getElementById('pw-error').classList.toggle('hidden', ok);
+  if (!ok) return;
+  form.reset();
+  TH.toast('Contraseña actualizada.', 'lock');
+}
+</script>
+</div>
+
+<div data-roles="AGENT" class="bg-surface-container-lowest rounded-xl shadow-sm p-space-xl space-y-space-lg">
+<div class="flex items-center justify-between pb-space-sm"><div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ajustes de Guardia y Notificaciones</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Determina qué alertas rompen el estado silencioso durante guardias activas y cómo recibes los reportes.</p></div><span class="material-symbols-outlined text-outline-variant text-[24px]">tune</span></div>
+<div class="space-y-space-md">
+<div class="flex items-start justify-between p-space-md bg-surface-container-low rounded-xl gap-space-md"><div class="space-y-0.5"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Notificarme por correo cuando me asignen un ticket crítico</span><span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-1.5 py-0.5 rounded uppercase">Sev-1 / P1</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Envío inmediato al buzón institucional y réplica al canal móvil de guardia.</p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0 mt-1"><input checked class="sr-only peer" id="toggle-critical-assign" type="checkbox"/><div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div></label></div>
+<div class="flex items-start justify-between p-space-md bg-surface-container-low rounded-xl gap-space-md"><div class="space-y-0.5"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Alertas de sonido para riesgo de brecha SLA &lt;30m</span><span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold uppercase">Atención</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Reproduce un repique sonoro en la consola web para tickets abiertos cerca de expirar su tiempo límite de respuesta.</p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0 mt-1"><input checked class="sr-only peer" id="toggle-sound-sla" type="checkbox"/><div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div></label></div>
+<div class="flex items-start justify-between p-space-md bg-surface-container-low rounded-xl gap-space-md"><div class="space-y-0.5"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Resumen diario de actividad a las 18:00</span><span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold uppercase">Digest</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Envía un informe de métricas, tickets resueltos y casos pendientes al término de la jornada regular.</p></div><label class="relative inline-flex items-center cursor-pointer flex-shrink-0 mt-1"><input checked class="sr-only peer" id="toggle-daily-digest" type="checkbox"/><div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div></label></div>
+<div class="p-space-md bg-surface-container-low rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between"><div><span class="font-title-md text-title-md text-on-surface block">Reasignación por Ausencia Imprevista</span><span class="font-body-sm text-body-sm text-on-surface-variant">Colega responsable secundario si no atiendes un ticket en 10 minutos:</span></div><span class="font-label-sm text-label-sm text-on-surface-variant">Asignación Cruzada</span></div>
+<div class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded-lg"><div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">CM</div><div class="flex-1 min-w-0"><p class="font-title-md text-title-md text-on-surface leading-tight">Carlos Méndez</p><p class="font-label-sm text-label-sm text-on-surface-variant">Soporte Técnico L3 (En línea)</p></div><button class="font-label-md text-label-md text-primary hover:underline px-space-sm" type="button">Cambiar</button></div>
+</div></div></div>
+
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex items-center justify-between">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-emerald-600">cloud_done</span><span>Última sincronización guardada hoy a las 11:24 AM</span></div>
+<div class="flex items-center gap-space-md">
+<button class="px-space-lg py-space-sm bg-surface-container-lowest hover:bg-surface-container text-on-surface font-title-md text-title-md rounded-lg transition-colors" id="btn-cancel" type="button">Cancelar</button>
+<button class="inline-flex items-center gap-space-xs px-space-xl py-space-sm bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md rounded-lg shadow-sm active:scale-95 transition-all" id="btn-save" type="button"><span class="material-symbols-outlined text-[18px]">check</span><span>Guardar cambios</span></button>
+</div></div>
+</section>
+</div>
+
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all duration-300 z-50" id="save-toast">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span><span class="font-body-md text-body-md">Preferencias de Elena Gómez actualizadas exitosamente</span>
+</div>
+</div>
+<script>
+const tabButtons = document.querySelectorAll('.tab-btn');
+tabButtons.forEach(btn => btn.addEventListener('click', () => {
+  tabButtons.forEach(b => { b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm'); b.classList.add('text-on-surface-variant'); });
+  btn.classList.remove('text-on-surface-variant');
+  btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+}));
+document.getElementById('agent-shift-toggle').addEventListener('change', e => {
+  document.getElementById('shiftLabel').textContent = e.target.checked ? 'En turno' : 'Fuera de turno (No disponible)';
+});
+const toast = document.getElementById('save-toast');
+document.getElementById('btn-save').addEventListener('click', () => {
+  toast.classList.remove('translate-y-24', 'opacity-0'); toast.classList.add('translate-y-0', 'opacity-100');
+  setTimeout(() => { toast.classList.remove('translate-y-0', 'opacity-100'); toast.classList.add('translate-y-24', 'opacity-0'); }, 3500);
+});
+document.getElementById('btn-cancel').addEventListener('click', () => document.getElementById('profile-form').reset());
+</script>
+
+</main>
+</div>
+</body>
+</html>
